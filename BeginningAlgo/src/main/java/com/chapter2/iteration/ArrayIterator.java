@@ -10,6 +10,13 @@ class ArrayIterator implements Iterator {
 	private int _last;
 	private int _first ;
 	
+	public ArrayIterator(Object[] array) {
+		assert array != null : "array can’t be null";
+		_array = array;
+		_first = 0;
+		_last = array.length - 1;
+	}
+	
 	public ArrayIterator(Object[] array, int start, int length) {
 		assert array != null : "array can’t be null";
 		assert start >= 0 : "start can’t be < 0";
